@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.character {
+    border: none;
+    border-radius: 10px !important;
+}
