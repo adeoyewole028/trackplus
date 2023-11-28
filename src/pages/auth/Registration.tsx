@@ -160,6 +160,7 @@ export default function EmailVerification() {
                             fullWidth
                             variant="contained"
                             sx={{
+                              mt: { xs: 4.5, sm: 0, md: 0 },
                               mb: 2,
                               bgcolor: "#FC6800",
                               "&:hover": {

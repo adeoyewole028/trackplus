@@ -134,14 +134,16 @@ export default function SignInSide() {
       <Grid
         container
         component="main"
-        sx={{ height: "100vh", position: "relative", overflow: "hidden" }}
+        sx={{
+          height: "100vh",
+          position: "relative",
+          overflow: { md: "hidden" },
+        }}
       >
         <CssBaseline />
         <Grid
           item
           xs={12}
-          sm={12}
-          md={12}
           sx={{
             backgroundImage:
               "linear-gradient(to right, #F97226 23.92%, #4242423D 150%), url(/img/image1.png)",
@@ -159,14 +161,17 @@ export default function SignInSide() {
         >
           <Grid
             item
+            xs={12}
+            sm={6}
+            md={6}
             sx={{
-              position: "absolute",
-              top: "0",
-              left: "30em",
-              width: "30%",
+              position: { md: "absolute" },
+              top: { sm: 10, md: 0 },
+              left: { sm: "10em", md: "20em" },
+              width: { md: "30%" },
               zIndex: 1,
               // margin: "60px",
-              mt: 20,
+              mt: { sm: 10, md: 20 },
               mr: 5,
               height: "calc(100% - 160px)",
             }}
@@ -237,16 +242,20 @@ export default function SignInSide() {
             </Stack>
           </Grid>
           <Grid
+            xs={12}
+            sm={12}
+            md={6}
             item
             sx={{
-              position: "absolute",
-              top: "0",
-              right: "0",
-              width: "30%",
+              position: { md: "absolute" },
+              top: { sm: 10, md: 0 },
+              right: { xs: 0, sm: 10, md: 0 },
+              mt: { xs: 12, sm: 10, md: 10 },
+              p: { xs: 0, sm: 4, md: 0 },
+              width: { xs: "100%", sm: "100%", md: "30%" },
               backgroundColor: "white",
               zIndex: 1,
-              mt: 10,
-              mr: 5,
+              mr: { md: 5 },
             }}
           >
             <Box

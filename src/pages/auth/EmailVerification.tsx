@@ -58,18 +58,19 @@ export default function EmailVerification() {
           height: "100vh",
           position: "relative",
           backgroundImage:
-            "linear-gradient(to right, #F97226 23.92%, #4242423D 150%), url(/img/image2.png)",
+            "linear-gradient(to right, #F97226 10.92%, #4242423D 100%), url(/img/image2.png)",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
+          overflow: "hidden",
         }}
         className="flex justify-center items-center"
       >
         <div className="flex justify-center w-full items-center">
           <div>
-            <Grid container columns={16}>
-              <Grid item xs={8}>
-                <div className="max-w-md mt-36">
+            <Grid container columns={{ xs: 8, sm: 12, md: 16 }}>
+              <Grid item xs={12} sm={12} md={6}>
+                <div className="max-w-md sm:mt-72 md:mt-96">
                   {" "}
                   <Stack
                     direction={{ sm: "column" }}
@@ -82,7 +83,7 @@ export default function EmailVerification() {
                     <Box>
                       <img src="/logo.svg" alt="" />
                     </Box>
-                    <Box>
+                    <Box className="hidden md:block">
                       <Typography
                         component="h1"
                         variant="h5"
@@ -138,14 +139,29 @@ export default function EmailVerification() {
                   </Stack>
                 </div>
               </Grid>
-              <Grid item xs={8}>
-                <div className="max-w-xs bg-white pt-5 rounded-lg pb-60 mt-20 ">
+              <Grid
+                item
+                xs={12}
+                sm={12}
+                md={6}
+                sx={{
+                  borderRadius: "10px",
+                  top: { sm: 10, md: 0 },
+                  right: { xs: 0, md: 0 },
+                  mt: { xs: 10, md: 40 },
+                  backgroundColor: "white",
+                  zIndex: 1,
+                  mr: { md: 5 },
+                }}
+              >
+                <div className="md:px-5 lg:px-5 xl:px-1 xl:max-w-md bg-white pt-5 rounded-lg pb-60 md:mt-20">
                   <Box
                     sx={{
                       mt: 2,
                       mx: 4,
                       display: "flex",
                       flexDirection: "column",
+                      justifyContent: "center",
                     }}
                   >
                     <Typography

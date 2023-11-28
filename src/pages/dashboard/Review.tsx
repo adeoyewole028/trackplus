@@ -45,13 +45,13 @@ export default function Review() {
     setForm({ ...form, phoneNumber: selectedOption.phone });
   };
   return (
-    <div className="px-20">
+    <div className="px-5 md:px-20">
       <Typography variant="h5" sx={{ fontWeight: 800 }}>
         Business Information
       </Typography>
       <Box>
-        <Grid component="form" container columns={16} gap={5}>
-          <Grid item xs={10}>
+        <Grid container columns={16} gap={5}>
+          <Grid item xs={16} md={10}>
             <Box sx={{ mt: 1 }}>
               <Box sx={{ mb: 2 }}>
                 <label htmlFor="businessName">
@@ -195,7 +195,7 @@ export default function Review() {
         </Grid>
 
         <Box>
-          <Stack direction={"row"} gap={5} ml={5}>
+          <Stack direction={"row"} gap={5} ml={5} mt={5}>
             <Box className="max-w-[6em] flex flex-col items-center justify-center text-center mb-5">
               <img src="/img/review.svg" alt="organization" />
               <Typography variant="caption">

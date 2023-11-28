@@ -76,13 +76,13 @@ export default function Business() {
     setForm({ ...form, phoneNumber: selectedOption.phone });
   };
   return (
-    <div className="px-20">
+    <div className="px-5 md:px-20">
       <Typography variant="h5" sx={{ fontWeight: 800 }}>
         Business Information
       </Typography>
       <Box>
-        <Grid component="form" container columns={16} gap={5}>
-          <Grid item xs={10}>
+        <Grid  columns={16} gap={5}>
+          <Grid item xs={16} md={10}>
             <Box sx={{ mt: 1 }}>
               <Box sx={{ mb: 2 }}>
                 <label htmlFor="businessName">

@@ -143,7 +143,7 @@ export default function Upload() {
     }
   }, [proofOfAddressFiles]);
   return (
-    <div className="px-20">
+    <div className="px-5 md:px-20">
       <Typography variant="h5" sx={{ fontWeight: 800, mb: 4 }}>
         Upload Document
       </Typography>
