@@ -134,7 +134,7 @@ export default function SignInSide() {
       <Grid
         container
         component="main"
-        sx={{ height: "100vh", position: "relative" }}
+        sx={{ height: "100vh", position: "relative", overflow: "hidden" }}
       >
         <CssBaseline />
         <Grid

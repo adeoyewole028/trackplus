@@ -14,18 +14,13 @@ import Upload from "../pages/dashboard/Upload";
 import Review from "../pages/dashboard/Review";
 
 function NavigationRoutes() {
-  // const loggedInUser = useAuth();
-
-  const getToken = localStorage.getItem("access_token");
-  // console.log(getToken, "getToken")
+  const getToken = true;
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Register />} />
         <Route path="/email-verification" element={<EmailVerification />} />
         <Route path="/registration" element={<Registration />} />
-
-        {/* Pass the handleLoginSuccess function as a prop to the Login component */}
 
         {getToken ? (
           <>
@@ -36,7 +31,6 @@ function NavigationRoutes() {
             </Route>
           </>
         ) : (
-          // Redirect to the sign up page if not logged in
           <Route path="/*" element={<Navigate to="/" />} />
         )}
       </Routes>
